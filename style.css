@@ -1,0 +1,789 @@
+/* ===========================================
+   ARTWORK BY ANDY
+   STYLE.CSS
+=========================================== */
+
+/* ---------- RESET ---------- */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f7f7;
+    color:#222;
+    line-height:1.6;
+
+}
+
+/* ---------- LINKS ---------- */
+
+a{
+
+    color:inherit;
+    text-decoration:none;
+
+}
+
+img{
+
+    display:block;
+    max-width:100%;
+
+}
+
+/* ---------- SECTION SPACING ---------- */
+
+section{
+
+    padding:100px 40px;
+
+}
+
+.section-title{
+
+    text-align:center;
+    margin-bottom:20px;
+
+}
+
+.section-title h2{
+
+    font-size:42px;
+    font-weight:700;
+    letter-spacing:1px;
+
+}
+
+.gallery-intro{
+
+    max-width:700px;
+    margin:20px auto 60px;
+
+    color:#666;
+
+    text-align:center;
+
+    font-size:18px;
+
+}
+
+/* ===========================================
+   NAVIGATION
+=========================================== */
+
+header{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    background:white;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+
+    z-index:999;
+
+}
+
+.navbar{
+
+    max-width:1300px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 40px;
+
+}
+
+.logo{
+
+    font-size:30px;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:35px;
+
+}
+
+.nav-links a{
+
+    font-weight:bold;
+
+    color:#333;
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+    color:#888;
+
+}
+
+.nav-link.active{
+
+    border-bottom:3px solid black;
+
+    padding-bottom:6px;
+
+}
+
+/* ===========================================
+   HERO
+=========================================== */
+
+.hero{
+
+    max-width:1300px;
+
+    margin:120px auto 60px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:70px;
+
+}
+
+.hero-image{
+
+    flex:1;
+
+}
+
+.hero-image img{
+
+    width:100%;
+
+    border-radius:18px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
+
+    filter:grayscale(100%);
+
+    transition:.5s;
+
+}
+
+.hero-image img:hover{
+
+    filter:grayscale(0%);
+
+    transform:scale(1.02);
+
+}
+
+.hero-text{
+
+    flex:1;
+
+}
+
+.hero-text h1{
+
+    font-size:58px;
+
+    margin-bottom:15px;
+
+}
+
+.hero-text h3{
+
+    font-size:26px;
+
+    color:#666;
+
+    margin-bottom:25px;
+
+}
+
+.hero-text p{
+
+    font-size:19px;
+
+    margin-bottom:35px;
+
+    max-width:520px;
+
+}
+
+.button{
+
+    display:inline-block;
+
+    background:#111;
+
+    color:white;
+
+    padding:15px 34px;
+
+    border-radius:8px;
+
+    transition:.3s;
+
+}
+
+.button:hover{
+
+    background:#444;
+
+    transform:translateY(-2px);
+
+}
+
+/* ===========================================
+   ABOUT
+=========================================== */
+
+.about{
+
+    background:white;
+
+}
+
+.about-container{
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+.about-text{
+
+    font-size:18px;
+
+    text-align:center;
+
+}
+
+.about-text p{
+
+    margin-bottom:25px;
+
+}
+
+/* ===========================================
+   PORTFOLIO GALLERY
+=========================================== */
+
+.portfolio{
+
+    background:#f7f7f7;
+
+}
+
+.gallery{
+    column-count:4;
+    column-gap:20px;
+    max-width:1400px;
+    margin:auto;
+}
+
+/* ---------- CARD ---------- */
+.card{
+    display:inline-block;
+    width:100%;
+    margin:0 0 20px;
+    overflow:hidden;
+    border-radius:18px;
+    position:relative;
+    background:white;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    break-inside:avoid;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 18px 40px rgba(0,0,0,.25);
+}
+
+/* ---------- IMAGE ---------- */
+
+.card img{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+.card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 45px rgba(0,0,0,.25);
+
+}
+
+/* ===========================================
+   CARD SIZES
+=========================================== */
+<!-- 
+.featured{
+
+    grid-column:span 8;
+
+    grid-row:span 4;
+
+}
+
+.wide{
+
+    grid-column:span 6;
+
+    grid-row:span 3;
+
+}
+
+.tall{
+
+    grid-column:span 4;
+
+    grid-row:span 5;
+
+} -->
+
+/* Normal artwork */
+
+<!-- .card:not(.featured):not(.wide):not(.tall){
+
+    grid-column:span 3;
+
+    grid-row:span 3;
+
+} -->
+
+/* ===========================================
+   IMAGE OVERLAY
+=========================================== */
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.88),
+        rgba(0,0,0,.35),
+        transparent
+    );
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    padding:28px;
+
+    opacity:0;
+
+    transition:opacity .35s ease;
+
+}
+
+.card:hover .overlay{
+
+    opacity:1;
+
+}
+
+.overlay h3{
+
+    color:white;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    margin-bottom:6px;
+
+}
+
+.overlay p{
+
+    color:#ddd;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+/* ===========================================
+   FADE-IN ANIMATION
+=========================================== */
+
+.card{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    animation:fadeUp .8s ease forwards;
+
+}
+
+/* Stagger animation */
+
+.card:nth-child(1){animation-delay:.05s;}
+.card:nth-child(2){animation-delay:.10s;}
+.card:nth-child(3){animation-delay:.15s;}
+.card:nth-child(4){animation-delay:.20s;}
+.card:nth-child(5){animation-delay:.25s;}
+.card:nth-child(6){animation-delay:.30s;}
+.card:nth-child(7){animation-delay:.35s;}
+.card:nth-child(8){animation-delay:.40s;}
+.card:nth-child(9){animation-delay:.45s;}
+.card:nth-child(10){animation-delay:.50s;}
+.card:nth-child(11){animation-delay:.55s;}
+.card:nth-child(12){animation-delay:.60s;}
+.card:nth-child(13){animation-delay:.65s;}
+.card:nth-child(14){animation-delay:.70s;}
+.card:nth-child(15){animation-delay:.75s;}
+.card:nth-child(16){animation-delay:.80s;}
+.card:nth-child(17){animation-delay:.85s;}
+.card:nth-child(18){animation-delay:.90s;}
+.card:nth-child(19){animation-delay:.95s;}
+.card:nth-child(20){animation-delay:1s;}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================================
+   CONTACT
+=========================================== */
+
+.contact{
+
+    background:#efefef;
+
+}
+
+.contact-info{
+
+    max-width:800px;
+
+    margin:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:20px;
+
+    font-size:20px;
+
+    text-align:center;
+
+}
+
+.contact-info a{
+
+    color:#111;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.contact-info a:hover{
+
+    color:#777;
+
+}
+
+/* ===========================================
+   FOOTER
+=========================================== */
+
+footer{
+
+    background:#111;
+
+    color:white;
+
+    text-align:center;
+
+    padding:30px 20px;
+
+    font-size:15px;
+
+    letter-spacing:1px;
+
+}
+
+/* ===========================================
+   LIGHTBOX
+=========================================== */
+.lightbox{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.9);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.lightbox.active{
+    display:flex;
+}
+
+.lightbox img{
+    max-width:90%;
+    max-height:90%;
+    border-radius:10px;
+}
+
+.close{
+    position:absolute;
+    top:30px;
+    right:40px;
+    color:white;
+    font-size:45px;
+    cursor:pointer;
+}
+
+
+/* Optional previous/next arrows */
+
+.lightbox-prev,
+.lightbox-next{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    font-size:60px;
+
+    color:white;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    padding:15px;
+
+    transition:.3s;
+
+}
+
+.lightbox-prev{
+
+    left:20px;
+
+}
+
+.lightbox-next{
+
+    right:20px;
+
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover{
+
+    transform:translateY(-50%) scale(1.1);
+
+}
+
+/* ===========================================
+   BACK TO TOP
+=========================================== */
+
+#topBtn{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#111;
+
+    color:white;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    display:none;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.25);
+
+    transition:.3s;
+
+    z-index:900;
+
+}
+
+#topBtn:hover{
+
+    transform:translateY(-4px);
+
+    background:#444;
+
+}
+
+/* ===========================================
+   TABLET
+=========================================== */
+
+@media (max-width:900px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+    .nav-links{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+    .hero{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        gap:40px;
+
+    }
+
+    .hero-text p{
+
+        max-width:100%;
+
+    }
+
+    .hero-text h1{
+
+        font-size:42px;
+
+    }
+
+    .gallery{
+
+        grid-template-columns:repeat(2,1fr);
+
+        grid-auto-rows:250px;
+
+    }
+
+    .featured,
+    .wide,
+    .tall,
+    .card{
+
+        grid-column:span 2 !important;
+
+        grid-row:span 1 !important;
+
+    }
+
+}
+
+/* ===========================================
+   MOBILE
+=========================================== */
+@media (max-width:1100px){
+    .gallery{
+        column-count:3;
+    }
+}
+
+@media (max-width:768px){
+    .gallery{
+        column-count:2;
+    }
+}
+
+@media (max-width:500px){
+    .gallery{
+        column-count:1;
+    }
+}
